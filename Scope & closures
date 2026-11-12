@@ -1,0 +1,84 @@
+
+
+//global scope
+
+a='naresh';
+
+function name(){
+    console.log(a);
+}
+name();
+
+console.log(a);     
+
+// function scope
+
+function names(){
+    b='naresh';
+    console.log(b);
+}
+names();
+
+console.log(b); 
+
+// Block scope
+
+if(true){
+     age= 'viswa';
+    city='madurai';
+    console.log(age);
+}
+console.log(age);
+//------------------------------
+
+ a = 10;
+
+function test() {
+ b = 20;
+
+    if (true) {
+         c = 30;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+
+    console.log(b);
+    console.log(c);
+}
+
+test();
+
+//  Closure
+
+ console.log('------------------------------------------------------------');
+
+ function createcounter(){
+    count=0;
+
+    return function(){
+        count++;
+        console.log(count);
+    };
+ }
+
+ increase= createcounter();
+ increase();
+  increase();
+   increase();
+
+ //  Hoisted
+
+ console.log('------------------------------------------------------------');
+
+ console.log(a);
+var aa = 10;
+
+console.log(b);
+let bb = 20;
+
+add(10, 20);
+
+function add(ab, bc) {
+    console.log(ab + bc);
+}
